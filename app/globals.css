@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  @variants responsive {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+  }
+}
+
+/*  */
+
+strong {
+  margin-top: 100px;
+  padding-top: 100px;
+}
+
+p aside {
+  background-color: #1f1f1f;
+  /* border: 1px red solid; */
+  padding: 5px 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+p {
+  color: whitesmoke;
+  margin: 20px 2px 3px;
+  /* font-weight: bold; */
+  font-size: 18px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: larger;
+  margin-top: 20px;
+}
+
+h3 {
+  /* border: 1px solid red; */
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: larger;
+}
+
+li {
+  /* color: red; */
+  margin: 25px 20px 0px;
+  list-style: disc;
+  font-size: 20px;
+}
+
+blockquote {
+  border-left: 2px solid yellow;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  background-color: #1f1f1f;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+blockquote:hover {
+  background-color: #323232;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+span p {
+  border: 1px solid red;
+}
+
+/* p::first-letter {} */
+
+.verses {
+  border: 1px solid red;
+}
+
+#verses {
+  border: 1px solid red;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 640px) {
+  p {
+    color: rgb(200, 200, 200);
+    margin: 15px 2px 3px;
+    /* font-weight: bold; */
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  h1 {
+    margin-top: 15px;
+  }
+
+  strong {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  li {
+    /* color: red; */
+    margin: 25px 20px 0px;
+    list-style: disc;
+    font-size: 16px;
+  }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 768px) {
+  p {
+    color: rgb(200, 200, 200);
+    margin: 15px 2px 3px;
+    /* font-weight: bold; */
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  h1 {
+    margin-top: 15px;
+  }
+
+  strong {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  li {
+    /* color: red; */
+    margin: 25px 20px 0px;
+    list-style: disc;
+    font-size: 16px;
+  }
+}
+
+/* PC Responsive Design */
+@media (min-width: 770px) {
+  p {
+    color: rgb(210, 210, 210);
+    margin: 20px 2px 3px;
+    /* font-weight: bold; */
+    font-size: 18px;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 20px;
+  }
+
+  strong {
+    margin-top: 100px;
+    padding-top: 100px;
+  }
+
+  li {
+    /* color: red; */
+    margin: 25px 20px 0px;
+    list-style: disc;
+    font-size: 20px;
+  }
+}
